@@ -1,13 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: kubedemoapp-service
+  name: kubedemoapp1-service
 spec:
   selector:
-    app: kubedemoapp
+    app: kubedemoapp1
   ports:
     - protocol: TCP
       port: 5000
       targetPort: 5000
       nodePort: 30084
   type: NodePort
+
