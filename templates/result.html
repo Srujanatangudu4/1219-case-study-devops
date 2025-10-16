@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Results - Sunrise & Sunset</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+            background: #fff8dc;
+        }
+
+        .result {
+            margin-top: 30px;
+            font-size: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🌇 Sunrise & Sunset Times</h1>
+
+    {% if error %}
+    <p style="color:red;">{{ error }}</p>
+    {% else %}
+    <div class="result">
+        <p><strong>City:</strong> {{ city }}</p>
+        <p><strong>Sunrise:</strong> {{ sunrise }}</p>
+        <p><strong>Sunset:</strong> {{ sunset }}</p>
+    </div>
+    {% endif %}
+
+    <br>
+    <a href="/">🔙 Back</a>
+</body>
+
+</html>
