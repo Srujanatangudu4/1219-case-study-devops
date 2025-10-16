@@ -1,19 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: 1219-deployment
+  name: ss-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: 1219
+      app: ss
     metadata:
       labels:
-        app: 1219
+        app: ss
     spec:
       containers:
-        - name: 1219
-          image: srujanatangudu4/1219:v1
+        - name: ss
+          image: srujanatangudu4/ss:v1
           ports:
             - containerPort: 5000
+
 
