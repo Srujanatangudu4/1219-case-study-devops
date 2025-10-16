@@ -1,22 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kubedemoapp1-deployment
+  name: sunrise_sunset-deployment
 spec:
-  replicas: 4
+  replicas: 3
   selector:
     matchLabels:
-      app: kubedemoapp1
-  template:
+      app: sunrise_sunset
     metadata:
       labels:
-        app: kubedemoapp1
+        app: sunrise_sunset
     spec:
       containers:
-        - name: kubedemoapp1
-          image: srujanatangudu4/1219:kubeimage
+        - name: sunrise_sunset
+          image: srujanatangudu4/sunrise_sunset:v1
           ports:
             - containerPort: 5000
-          imagePullPolicy: Always
-
-
