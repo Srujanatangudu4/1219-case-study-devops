@@ -4,13 +4,14 @@ metadata:
   name: ss-service
 spec:
   selector:
-    app: sunrise_sunset
+    app: ss
   ports:
     - protocol: TCP
       port: 5000
       targetPort: 5000
       nodePort: 30090
   type: NodePort
+
 
 
 
