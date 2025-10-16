@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Build Docker Image') {
             steps {
-                echo "Building Docker Image for Expense Tracker App"
-                bat "docker build -t 1219:v1 ."
+                echo "Building Docker Image for App"
+                bat "docker build -t ss:v1 ."
             }
         }
         stage('Docker Login') {
@@ -16,8 +16,8 @@ pipeline {
         stage('Push Docker Image to Docker Hub') {
             steps {
                 echo "Pushing Docker Image to Docker Hub"
-                bat "docker tag expense-tracker:v1 srujanatangudu4/1219:v1"
-                bat "docker push srujanatangudu4/1219:v1"
+                bat "docker tag expense-tracker:v1 srujanatangudu4/ss:v1"
+                bat "docker push srujanatangudu4/ss:v1"
             }
         }
         stage('Deploy to Kubernetes') {
@@ -37,6 +37,7 @@ pipeline {
         }
     }
 }
+
 
 
 
