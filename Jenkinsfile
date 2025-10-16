@@ -16,7 +16,7 @@ pipeline {
         stage('Push Docker Image to Docker Hub') {
             steps {
                 echo "Pushing Docker Image to Docker Hub"
-                bat "docker tag expense-tracker:v1 srujanatangudu4/ss:v1"
+                bat "docker tag ss:v1 srujanatangudu4/ss:v1"
                 bat "docker push srujanatangudu4/ss:v1"
             }
         }
@@ -37,6 +37,7 @@ pipeline {
         }
     }
 }
+
 
 
 
