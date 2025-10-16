@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
         - name: kubedemoapp
-          image: Srujanatangudu4/1219:kubeimage1
+          image: srujanatangudu4/1219:kubeimage1
           ports:
             - containerPort: 5000
           imagePullPolicy: Always
+
