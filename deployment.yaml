@@ -1,18 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sunrise_sunset-deployment
+  name: 1219-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: sunrise_sunset
+      app: 1219
     metadata:
       labels:
-        app: sunrise_sunset
+        app: 1219
     spec:
       containers:
-        - name: sunrise_sunset
-          image: srujanatangudu4/sunrise_sunset:v1
+        - name: 1219
+          image: srujanatangudu4/1219:v1
           ports:
             - containerPort: 5000
+
