@@ -1,17 +1,10 @@
-# Use official lightweight Python image
-FROM python:3.9-slim-buster
+FROM python:3.9-slim
 
-# Set working directory inside container
 WORKDIR /app
 
-# Copy all files into container
-COPY . /app
-
-# Install dependencies from requirements.txt
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose Flask default port
-EXPOSE 5000
+COPY . .
 
-# Command to run the Flask app
-CMD ["python3", "app.py"]
+CMD ["python", "app.py"]
